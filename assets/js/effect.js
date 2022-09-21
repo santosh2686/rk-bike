@@ -11,6 +11,7 @@ $(function() {
   })
 
   const sendEmail = function(requestBody, successCallback) {
+    requestBody._template = 'table'
     $.ajax({
         method: 'POST',
         url: 'https://formsubmit.co/ajax/d9225af3a93f7abb764d772df9d6e604',
@@ -36,7 +37,8 @@ $(function() {
       return
     }
     const requestBody = {
-      contact: value
+      contact: value,
+      _subject: 'Regular enquiry'
     }
     sendEmail(requestBody, function() {
       $('#sendEnquiry').hide()
@@ -66,7 +68,8 @@ $(function() {
     $('#whatsAppInput').removeClass('error')
     $(this).addClass('loading')
     const requestBody = {
-      whatsAppNumber: value
+      whatsAppNumber: value,
+      _subject: 'New whatsApp enquiry'
     }
     sendEmail(requestBody, function () {
       $('#successMessage').show()
@@ -123,6 +126,8 @@ $(function() {
       color: colorInput.val(),
       mobile: mobileInput.val(),
       email: emailInput.val(),
+      _subject: 'New test drive booking',
+      _autoresponse: 'Thank you for setting up the test drive. We will setup your test drive and will let you know via email.'
     }
     sendEmail(requestBody, function () {
       $('#bookRideSuccess').show()
@@ -132,7 +137,6 @@ $(function() {
   })
 
 })
-
 
 
 /*
