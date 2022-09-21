@@ -93,18 +93,25 @@
             </div>
           </div>
           <div class="home-content-right">
-            <form class="enquiry-box">
+            <div class="enquiry-box" id="enquiryBox">
               <input type="text" placeholder="Enter email/mobile for quick enquiry" />
-              <button type="submit">&#x2192;</button>
-            </form>
+              <button id="sendEnquiry">&#x2192;</button>
+              <span id="enquirySuccess">&#x2713;</span>
+            </div>
+            <div class="enquiry-box-error" id="enquiryBoxError">
+              Please enter valid email/mobile
+            </div>
+            <div class="enquiry-box-error" id="enquiryBoxError">
+              Please enter valid email/mobile
+            </div>
             <div class="social">
-              <a href="#">
+              <a href="#" target="_blank">
                 <img src="assets/images/youtube.png" />
               </a>
-              <a href="#">
+              <a href="#" target="_blank">
                 <img src="assets/images/fb.png" />
               </a>
-              <a href="#">
+              <a href="https://api.whatsapp.com/send?phone=919004044061" target="_blank">
                 <img src="assets/images/message.png" />
               </a>
             </div>
@@ -121,7 +128,7 @@
           Meet the RK E-Bike for a modern spin on a comfortable ride.
           Step in with ease and ride ahead on an electric bike that's built around you.
         </p>
-        <a href="#">Book a test ride</a>
+        <a href="#book">Book a test ride</a>
       </div>
     </div>
     <div class="red-product">
@@ -131,36 +138,49 @@
           standard with high precision. Every custom detail is crafted seamlessly with
           detailed precision with efficient performance.
         </p>
-        <a href="#">Book a test ride</a>
+        <a href="#book">Book a test ride</a>
       </div>
     </div>
     <div class="container book" id="book">
       <div class="ride-book">
           <strong>Book a test drive</strong>
-          <p>MAKE AN ENQUIRY NOW</p>
+          <p>Make an enquiry now</p>
           <div>
-            <input placeholder="Name" type="text" />
+            <input id="nameInput" placeholder="Name" type="text" />
+          </div>
+          <div class="bike-model-select">
+            <select id="modelInput">
+              <option value="">Bike model no.</option>
+              <option value="JMT 1000 3k">JMT 1000 3k</option>
+              <option value="JMT 1000 HS">JMT 1000 HS</option>
+              <option value="CLASSIC CITY">CLASSIC CITY</option>
+              <option value="JET 320">JET 320</option>
+              <option value="SUBSIDY ON ELECTRIC SCOOTER">SUBSIDY ON ELECTRIC SCOOTER</option>
+            </select>
           </div>
           <div>
-            <input placeholder="Bike model no." type="text" />
+            <input id="colorInput" placeholder="Color" type="text" />
           </div>
           <div>
-            <input placeholder="Color" type="text" />
+            <input id="mobileInput" placeholder="Mobile" type="text" />
           </div>
           <div>
-            <input placeholder="Mobile" type="text" />
+            <input id="emailInput" placeholder="Email" type="text" />
           </div>
-          <div>
-            <input placeholder="Email" type="text" />
-          </div>
-          <button>Submit</button>
+          <button id="bookRideSubmit" class="test-drive-submit">Submit</button>
+          <span id="bookRideSuccess">
+            Thank you for setting up the test drive. <br />
+            We will setup your test drive and will let you know via email.
+          </span>
       </div>
       <div class="whatsapp-enquiry">
         <strong>whatapp enquiry</strong>
+        <p>Our representative will reach out to you on whatsapp </p>
         <div>
-          <input placeholder="whatsApp number" type="text" />
+          <input id="whatsAppInput" placeholder="whatsApp number" type="text" />
         </div>
-        <button class="whats-app">Whatsapp</button>
+        <button id="whatsAppSubmit" class="whats-app">Whatsapp</button>
+        <span id="successMessage">We will reach out to you on your whatsApp at the earliest.</span>
       </div>
     </div>
     <div class="offer" id="offer">
@@ -171,28 +191,28 @@
           <strong>
             JMT1000 3k
           </strong>
-          <a href="#" class="enquiry-button">ENQUIRE NOW</a>
+          <a href="#book" class="enquiry-button">ENQUIRE NOW</a>
         </div>
         <div>
           <img src="assets/images/offer-2.png" />
           <strong>
             JMT1000HS
           </strong>
-          <a href="#" class="enquiry-button">ENQUIRE NOW</a>
+          <a href="#book" class="enquiry-button">ENQUIRE NOW</a>
         </div>
         <div>
           <img src="assets/images/offer-1.png" />
           <strong>
             Classic city
           </strong>
-          <a href="#" class="enquiry-button">ENQUIRE NOW</a>
+          <a href="#book" class="enquiry-button">ENQUIRE NOW</a>
         </div>
         <div>
           <img src="assets/images/offer-2.png" />
           <strong>
             JET 320
           </strong>
-          <a href="#" class="enquiry-button">ENQUIRE NOW</a>
+          <a href="#book" class="enquiry-button">ENQUIRE NOW</a>
         </div>
       </div>
     </div>
@@ -204,7 +224,7 @@
         <div>
           <img src="assets/images/catalog-1.png" />
         </div>
-        <a href="#" class="enquiry-button">ENQUIRE NOW</a>
+        <a href="#book" class="enquiry-button">ENQUIRE NOW</a>
       </div>
       <div>
         <strong>
@@ -213,7 +233,7 @@
         <div>
           <img src="assets/images/catalog-2.png" />
         </div>
-        <a href="#" class="enquiry-button">ENQUIRE NOW</a>
+        <a href="#book" class="enquiry-button">ENQUIRE NOW</a>
       </div>
       <div>
         <strong>
@@ -222,7 +242,7 @@
         <div>
           <img src="assets/images/catalog-3.png" />
         </div>
-        <a href="#" class="enquiry-button">ENQUIRE NOW</a>
+        <a href="#book" class="enquiry-button">ENQUIRE NOW</a>
       </div>
       <div>
         <strong>
@@ -231,7 +251,7 @@
         <div>
           <img src="assets/images/catalog-4.png" />
         </div>
-        <a href="#" class="enquiry-button">ENQUIRE NOW</a>
+        <a href="#book" class="enquiry-button">ENQUIRE NOW</a>
       </div>
       <div>
         <strong>
@@ -240,7 +260,7 @@
         <div>
           <img src="assets/images/catalog-5.png" />
         </div>
-        <a href="#" class="enquiry-button">ENQUIRE NOW</a>
+        <a href="#book" class="enquiry-button">ENQUIRE NOW</a>
       </div>
     </div>
     
