@@ -364,6 +364,7 @@ header {
 .book select {
   appearance: none;
   color: #777777;
+  background: none;
 }
 
 .bike-model-select {
@@ -386,6 +387,7 @@ header {
   padding: 8px 20px;
   min-width: 170px;
   cursor: pointer;
+  color: #28324B;
 }
 
 .book button.whats-app {
